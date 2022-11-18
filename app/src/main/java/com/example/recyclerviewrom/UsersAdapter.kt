@@ -1,5 +1,6 @@
 package com.example.recyclerviewrom
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
@@ -21,6 +22,7 @@ class UsersAdapter(
 ) : RecyclerView.Adapter<UsersAdapter.UsersViewHolder>(), View.OnClickListener {
 
     var users: List<User> = emptyList()
+        @SuppressLint("NotifyDataSetChanged")
         set(newValue) {
             field = newValue
             notifyDataSetChanged()
@@ -49,6 +51,8 @@ class UsersAdapter(
 
         binding.root.setOnClickListener(this)
         binding.ivMore.setOnClickListener(this)
+
+        return UsersViewHolder(binding)
 
     }
 
