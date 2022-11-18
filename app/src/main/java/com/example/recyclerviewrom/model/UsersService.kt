@@ -62,8 +62,6 @@ class UsersService {
 
 
 
-
-
     companion object {
         private val IMAGES = mutableListOf(
             "https://www.flaticon.com/ru/free-icon/train_1661916",
