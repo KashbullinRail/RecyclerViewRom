@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerviewrom.databinding.ActivityMainBinding
-import com.example.recyclerviewrom.databinding.ItemUserBinding
 import com.example.recyclerviewrom.model.User
 import com.example.recyclerviewrom.model.UsersListener
 import com.example.recyclerviewrom.model.UsersService

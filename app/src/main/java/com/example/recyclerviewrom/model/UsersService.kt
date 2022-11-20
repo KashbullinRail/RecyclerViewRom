@@ -1,6 +1,5 @@
 package com.example.recyclerviewrom.model
 
-import com.github.javafaker.Color
 import com.github.javafaker.Faker
 import java.util.*
 
