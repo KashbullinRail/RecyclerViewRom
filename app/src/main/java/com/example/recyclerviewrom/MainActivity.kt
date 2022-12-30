@@ -22,19 +22,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        adapter = UsersAdapter(object : UserActionListener {
-            override fun onUserMove(user: User, moveBy: Int) {
-                usersService.moveUser(user, moveBy)
-            }
-
-            override fun onUserDelete(user: User) {
-                usersService.deleteUser(user)
-            }
-
-            override fun onUserDetails(user: User) {
-                Toast.makeText(this@MainActivity, "Вы нажали на ${user.name}", Toast.LENGTH_SHORT).show()
-            }
-        })
+//        adapter = UsersAdapter(object : UserActionListener {
+//            override fun onUserMove(user: User, moveBy: Int) {
+//                usersService.moveUser(user, moveBy)
+//            }
+//
+//            override fun onUserDelete(user: User) {
+//                usersService.deleteUser(user)
+//            }
+//
+//            override fun onUserDetails(user: User) {
+//                Toast.makeText(this@MainActivity, "Вы нажали на ${user.name}", Toast.LENGTH_SHORT).show()
+//            }
+//        })
 
         var layoutManager = LinearLayoutManager(this)
         binding.rvList.layoutManager = layoutManager
@@ -53,5 +53,5 @@ class MainActivity : AppCompatActivity() {
         adapter.users = it
     }
 
-
+    
 }

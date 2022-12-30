@@ -1,6 +1,5 @@
 package com.example.recyclerviewrom
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
@@ -11,11 +10,11 @@ import com.bumptech.glide.Glide
 import com.example.recyclerviewrom.databinding.ItemUserBinding
 import com.example.recyclerviewrom.model.User
 
-interface UserActionListener {
-    fun onUserMove(user: User, moveBy: Int)
-    fun onUserDelete(user: User)
-    fun onUserDetails(user: User)
-}
+//interface UserActionListener {
+//    fun onUserMove(user: User, moveBy: Int)
+//    fun onUserDelete(user: User)
+//    fun onUserDetails(user: User)
+//}
 
 class UsersAdapter(
     private val actionListener: UserActionListener
@@ -27,7 +26,6 @@ class UsersAdapter(
 
 
     var users: List<User> = emptyList()
-        @SuppressLint("NotifyDataSetChanged")
         set(newValue) {
             field = newValue
             notifyDataSetChanged()
@@ -50,13 +48,11 @@ class UsersAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemUserBinding.inflate(inflater, parent, false)
-        return UsersViewHolder(binding)
+//        return UsersViewHolder(binding)
 
         binding.root.setOnClickListener(this)
         binding.ivMore.setOnClickListener(this)
-
         return UsersViewHolder(binding)
-
     }
 
     override fun onBindViewHolder(holder: UsersViewHolder, position: Int) {
